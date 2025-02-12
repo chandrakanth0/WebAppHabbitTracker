@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="daily-habit.html">Daily Habit Tracking</a></li>
+            <li><a href="status.html">Habit Status & Progress</a></li>
+            <li><a href="priority.html">Priority-wise Habit</a></li>
+            <li><a href="profile.html">User Profile</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="container">
+        <h1>Welcome to Your Habit Tracker</h1>
+        <p>Track your daily habits and build a better lifestyle!</p>
+        
+        <div id="habits">
+            <h2>Your Habits</h2>
+            <ul id="habit-list">
+                <!-- Habits will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+const token = localStorage.getItem("token");
+
+if (!token) {
+    window.location.href = "/";
+}
+
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     const user = localStorage.getItem("user");
+        //     if (!user) {
+        //         window.location.href = "index.html"; // Redirect to login if not authenticated
+        //     }
+        // });
+    </script>
+
+</body>
+</html>
